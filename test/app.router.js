@@ -43,6 +43,7 @@ describe('app.router', function(){
       it('should include ' + method.toUpperCase(), function(done){
         if (method === 'query' && shouldSkipQuery(process.versions.node)) {
           this.skip()
+          done()
         }
         var app = express();
 
